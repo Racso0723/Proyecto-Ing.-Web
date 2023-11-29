@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/* Estilos generales */
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Estilos del encabezado */
+  
+  header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  #banner {
+    text-align: center;
+  }
+  
+  #logo {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .Titulo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .seccion-redes {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.seccion-redes i {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    font-size: 65px;
+}
+
+  
+  /* Estilos del formulario */
+  
+  #principal {
+    padding: 50px;
+    text-align: center;
+    background-color:#dedddde6;
+  }
+  
+  .cuerpo {
+    display: inline-block;
+    padding: 40px;
+    text-align: left;
+    border-radius: 10px;
+       	background-color: #214F4B;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+  }
+  
+  .formulario {
+    max-width: 400px;
+    margin: auto;
+    color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .submit{
+    text-align: center;
+  }
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1edbf8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #16c172;
+  }
+
+  /* Estilos del pie de página */
+  
+  footer {
+    background-color:  #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Estilos generales */
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Estilos del encabezado */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+#banner {
+  text-align: center;
+}
+
+#logo {
+  max-width: 300px;
+  height: auto;
+}
+
+.Titulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.seccion-redes {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.seccion-redes i {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 65px;
+}
+
+/* Estilos del formulario */
+#principal {
+  padding: 50px;
+  text-align: center;
+  background-color: #dedddde6;
+}
+
+.cuerpo {
+  display: inline-block;
+  padding: 40px;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #214F4B;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.formulario {
+  max-width: 400px;
+  margin: auto;
+  color: #fff;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  text-align: left;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+  text-align: center;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #1edbf8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #16c172;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+      flex-direction: column; /* Cambia el diseño del encabezado a columna */
+      text-align: center;
+  }
+}
+
+/* Media Query para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media only screen and (max-width: 480px) {
+  header {
+      padding: 5px; /* Cambia el relleno del encabezado */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 10px;
+  }
+}
+
+/* Media Query para tablets (Ancho de pantalla de 768px a 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+      padding: 10px 15px; /* Ajusta el relleno del encabezado */
+  }
+}
+
+/* Media Query para Laptops (Ancho de pantalla de 1025px en adelante) */
+@media only screen and (min-width: 1025px) {
+  header {
+      padding: 10px 20px; /* Ajusta el relleno del encabezado */
+  }
+}
+

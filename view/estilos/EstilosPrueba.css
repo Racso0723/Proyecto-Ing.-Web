@@ -1,0 +1,342 @@
+  /* Estilos generales */
+  body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+
+/* Estilos para la sección del logo */
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 20px;
+    flex-grow: 1; /* Ocupar todo el espacio disponible */
+}
+
+
+
+.barra-busqueda input[type="text"] {
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+
+
+
+#boton-busqueda i {
+    font-size: 16px; /* Ajusta el tamaño del icono según tus preferencias */
+}
+#boton-busqueda i:hover {
+    font-size: 18px;
+}
+
+
+
+/* Estilo para el botón de búsqueda (puedes personalizarlo según tus preferencias) */
+
+#boton-busqueda {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+/* Secciones de iconos */
+
+.seccion-iconos {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+
+
+.seccion-iconos i {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    font-size: 65px;
+}
+
+.seccion-iconos i:hover{
+    background-color: #11748d;
+    font-size: 68px;
+}
+
+
+
+
+.seccion-calendario i {
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    font-size: 65px;
+}
+/*Cambios solo para el css del calendario html*/
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.seccion-calendarioInv{
+    visibility: hidden;
+}
+
+/* Contenido principal */
+#titulo
+{
+    text-align: center;
+    margin-bottom: 3px;    
+}
+#restaurante1 {
+    text-align: center;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contenedor-restaurante {
+    width: 27%;
+    min-width: 250px;
+    padding: 3px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    margin: 10px 15px; 
+    position: relative;
+    font-family: 'Lora', serif;
+
+}
+
+.contenedor-restaurante:hover {
+    border: 2px solid #10d42d;
+    box-shadow: rgba(0, 0, 0, 0.6);
+}
+
+.contenedor-restaurante img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 3px 0 0;
+}
+
+.atributos
+{
+    height: 70px;
+    text-align: start;
+    padding-bottom: 0%;
+    position: relative;
+    bottom: 50px;
+    font-family: 'Lora', serif;
+
+}
+.local {
+    color: #606063;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 15px;
+}
+
+.atributos #nombreRest {
+    color: #1a1a1a;
+    font-size: 21px;
+    text-align: start;
+}
+.atributos .nota
+{
+    position: relative;
+    bottom: 25px;
+    align-items: center;
+    color: rgb(243, 181, 25);
+    font-size: 23px;
+}
+.atributos p {
+    position: relative;
+    bottom: 40px;
+    color: #606063;
+    font-size: 16px;
+}
+.atributos strong {
+    color: black;
+}
+
+
+
+footer {
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+
+footer p {
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Lora', serif;
+}
+
+#info-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#info-footer p {
+    text-align: center;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Lora', serif;
+    position: relative;
+    right: 0;
+    margin: 10px;
+}
+
+#info-enlaces {
+    padding: 2% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#info-enlaces ul li {
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+}
+
+#info-enlaces ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+#info-enlaces ul li:hover::after {
+    width: 100%;
+}
+
+#redes-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#redes-footer i {
+    font-size: 67px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+}
+
+
+
+
+/* Media Query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media only screen and (max-width: 767px) {
+    header {
+        flex-direction: column; /* Cambia el diseño del encabezado a columna */
+        text-align: center;
+    }
+
+
+    .barra-busqueda {
+        margin: 10px 0; /* Ajusta el margen superior de la barra de búsqueda */
+    }
+    #restaurante1
+    {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 5px; /* Cambia el relleno del encabezado */
+    }
+
+    .barra-busqueda {
+        margin: 5px 0; /* Ajusta el margen superior de la barra de búsqueda */
+    }
+    #restaurante1
+    {
+        justify-content: center;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Puedes agregar más estilos específicos para pantallas muy pequeñas aquí */
+}
+
+@media only screen and (max-width: 1024px) {
+    /* Estilos específicos para tablets */
+    header {
+        padding: 10px 15px; /* Ajusta el relleno del encabezado */
+    }
+
+    .barra-busqueda {
+        padding: 10px 2px 0px 10px;
+    }
+    #restaurante1
+    {
+        justify-content: center;
+    }
+}
+
+/* Media Query para Laptops (Ancho de pantalla de 1025px en adelante) */
+@media only screen and (min-width: 1025px) {
+    /* Estilos específicos para laptops */
+    header {
+        padding: 10px 20px; /* Ajusta el relleno del encabezado */
+    }
+
+    .barra-busqueda {
+        margin: 0 20px; /* Ajusta el margen superior de la barra de búsqueda */
+    }
+    #restaurante1
+    {
+        justify-content: center;
+    }
+}
