@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     require_once "../models/Reserva.php";
     require_once '../helpers/sesion_helper.php';
 
