@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="estilos/EstilosR.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <script src="https://kit.fontawesome.com/8680de2650.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
        <!-- Fonts de google--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +34,6 @@
                     <i class="bx bxs-log-out" alt= "simbolo salir sesión Logout"></i>
                 </a>
             </div>
-        <div class="seccion-calendario">
-            <i class="bx bx-calendar" alt = 'seccion de calendario de reservas'></i>
-        </div>
         </section>
     </header>
     <section class="container">
@@ -56,7 +55,18 @@
             </div>
             <div class="form-group">
               <label for="reservation-time">Nombre del Restaurante:</label>
-              <input type="text" id="nombre_rest" name="nombre_rest"  placeholder= 'Ingrese el nombre del restaurante' required>
+              <select id="nombre_rest" name="nombre_rest" required>
+                <option value="">Seleccionar restaurante</option>
+                <option value="Mole o Mas">Mole o Mas </option>
+                <option value="Global Palate">Global Palate</option>
+                <option value="Raices Naturales"> Raices Naturales</option>
+                <option value="Giorgios">Giorgios</option>
+                <option value="Don Ming">Don Ming</option>
+                <option value="Sabores Indigenas"> Sabores Indigenas</option>
+                <option value="El Bernabeu">El Bernabeu</option>
+                <option value="Kessler Galimany">Kessler Galimany</option>
+                <option value="Rincon del Cafe"> Rincon del Cafe</option>
+              </select>
               
             </div>
             <div class="form-group">
@@ -64,9 +74,9 @@
             </div>
             <div id="errores">
                 <?php flash('correcto') ?>
+                <?php flash('numero') ?>
                 <?php flash('sesion') ?>
                 <?php flash('horario') ?>
-                <?php flash('nombre') ?>
                 <?php flash('hora') ?>
                 <?php flash('fecha') ?>
             </div>
@@ -77,27 +87,24 @@
         </div>
     </section>
     <footer>
-        <div id="info-footer">
-            <ul>
-                <p>©Copyright 2023 ReservaYa</p>
-                <hr>
-                <p>Contáctenos:507-6567-6768</p>
-            </ul>
-        </div>
-        <div id="info-enlaces">
-            <ul>
-                <li><a href="InicialPrueba.html">Página de Inicio</a></li>
-                <li><a href="calendario_reservas.html">Calendario de Reservas</a></li>
-            </ul>
-        </div>
-        <div id="redes-footer">
-            <a href="https://www.facebook.com">
-                <i class="bx bxl-facebook-circle" alt="logo de facebook"></i>
-            </a>
-            <a href="https://www.instagram.com">
-                <i class="bx bxl-instagram" alt= 'logo de instagram'></i>
-            </a>
-        </div>
+<div class="footerContainer">
+    <div class="socialIcons"> 
+        <a href=""><i class = "fa-brands fa-facebook"></i></a>
+        <a href=""><i class = "fa-brands fa-instagram"></i></a>
+        <a href=""><i class = "fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="footerNav">
+        <ul>
+            <li><a href="InicialPrueba.php">Inicial</a></li>
+            <li><a href="historialReservas.php">Historial de Reservas</a></li>
+            <li><a href="Reservas.php">Hacer Reserva</a></li>
+            <li><a href="../controllers/Users.php?q=logout">Logout</a></li>
+        </ul>
+    </div> 
+    <div class="footerBottom">
+        <p>Copyright 2023; Elaborado por <span class="designer"> Oscar & Javier </span></p>
+    </div>
+</div>
 </footer>
 </body>
 </html>
