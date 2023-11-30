@@ -1,5 +1,5 @@
 <?php
-include "function.php";
+include "../models/function.php";
 
 if(isset($_GET['restaurante'])) {
     $searchTerm = $_GET['restaurante'];
@@ -17,9 +17,10 @@ if(isset($_GET['restaurante'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/EstilosB.css">
+    <link rel="stylesheet" href="estilos/EstilosBu.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
        <!-- Fonts de google--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +29,11 @@ if(isset($_GET['restaurante'])) {
     <title>Busqueda</title>
 </head>
 <body>
-    <header>
+        <header>
         <div class="logo">
-            <img src="img/Reserva Ya!-logos.jpeg" alt="Logo de la página web">
+            <img src="img/Logo.png" alt="Logo de la página web">
         </div>
-        <div class="barra-busqueda">
+       <div class="barra-busqueda">
             <form action="Busqueda.php" method="GET">
                 <input type="text" name="restaurante" placeholder="Buscar...">
                 <button type="submit" aria-label="Buscar restaurante">
@@ -40,16 +41,20 @@ if(isset($_GET['restaurante'])) {
                 </button>
             </form>
         </div>
-        <section class = 'seccion-iconos'>
+                <section class = 'seccion-iconos'>
             <div class="seccion-redes">
                 <i class="bx bxl-instagram" alt="logo de facebook"></i>
                 <i class="bx bxl-facebook-circle" alt= 'logo de instagram'></i> 
-                <i class="bx bx-user" alt= 'logo de usuario'></i> 
+                <a href="../controllers/Users.php?q=logout">
+                    <i class="bx bxs-log-out" alt= "simbolo salir sesión Logout"></i>
+                </a>
             </div>
         <div class="seccion-calendario">
-            <i class="bx bx-calendar" alt = 'seccion de calendario de reservas'></i>
+            <a href="HistorialReservas.php">
+                <i class="bx bx-calendar" alt = 'seccion de calendario de reservas'></i>
+            </a>
         </div>
-    </section>
+        </section>
     </header>
     <div class ='encabezado'>
         <h2 class='titulo'>Restaurantes Encontrados</h2>
@@ -121,7 +126,7 @@ if(isset($_GET['restaurante'])) {
             <?php foreach ($restaurants as $restaurant) : ?>
                 <!-- Aquí muestras los resultados -->
                 <div class='contenedor-restaurante'>
-                    <a href="Giorgios.html" class="enlace-restaurante">
+                    <a href="<?php echo $restaurant['nombre'] ?>.php" class="enlace-restaurante">
                         <img src="<?php echo $restaurant['image']?>" alt='Imagen del restaurante'>
                         <div class='local'>
                             <p><?php echo $restaurant['tipo_comida'] ?></p>
@@ -141,27 +146,24 @@ if(isset($_GET['restaurante'])) {
     </div>
     </section>
     <footer>
-        <div id="info-footer">
-            <ul>
-                <p>©Copyright 2023 ReservaYa</p>
-                <hr>
-                <p>Contáctenos:507-6567-6768</p>
-            </ul>
+        <div class="footerContainer">
+            <div class="socialIcons"> 
+                <a href=""><i class = "fa-brands fa-facebook"></i></a>
+                <a href=""><i class = "fa-brands fa-instagram"></i></a>
+                <a href=""><i class = "fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="InicialPrueba.php">Inicial</a></li>
+                    <li><a href="HistorialReservas.php">Historial de Reservas</a></li>
+                    <li><a href="Reservas.php">Hacer Reserva</a></li>
+                    <li><a href="../controllers/Users.php?q=logout">Logout</a></li>
+                </ul>
+            </div> 
+            <div class="footerBottom">
+                <p>Copyright 2023; Elaborado por <span class="designer"> Oscar & Javier </span></p>
+            </div>
         </div>
-        <div id="info-enlaces">
-            <ul>
-                <li><a href="InicialPrueba.html">Página de Inicio</a></li>
-                <li><a href="calendario_reservas.html">Calendario de Reservas</a></li>
-            </ul>
-        </div>
-        <div id="redes-footer">
-            <a href="https://www.facebook.com">
-                <i class="bx bxl-facebook-circle" alt="logo de facebook"></i>
-            </a>
-            <a href="https://www.instagram.com">
-                <i class="bx bxl-instagram" alt= 'logo de instagram'></i>
-            </a>
-        </div>
-</footer>
+    </footer>
 </body>
 </html>
