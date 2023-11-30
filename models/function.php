@@ -2,7 +2,7 @@
 
 function dbConnect()
 {
-    $connection = mysqli_connect('localhost', 'root', '', 'reservaya');
+    $connection = mysqli_connect('localhost', 'id21438984_root', 'Aranda.Jimenez1', 'id21438984_reservaya');
 
     if (!$connection) {
         die("Conexion a la Base de Datos ha fallado: " . mysqli_connect_error());
@@ -102,4 +102,29 @@ function getFilteredRestaurants($selectedComidas, $selectedLocales, $selectedCos
     }
 }
 
+function getCommentsByRestaurantName($restaurant_name) {
+    $mysqli = dbConnect();
+    $restaurant_name = $mysqli->real_escape_string($restaurant_name); // Evitar inyección SQL
+
+    $query = "SELECT * FROM comentarios WHERE restaurant_name = '$restaurant_name'";
+    $result = $mysqli->query($query);
+
+    if ($result && $result->num_rows > 0) {
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } else {
+        return []; // Retorna un array vacío si no hay comentarios o hay errores
+    }
+}
+
+function insertComment($restaurant_name, $username, $comment, $rating) {
+    $mysqli = dbConnect();
+    $restaurant_name = $mysqli->real_escape_string($restaurant_name);
+    $username = $mysqli->real_escape_string($username);
+    $comment = $mysqli->real_escape_string($comment);
+    $rating = $mysqli->real_escape_string($rating);
+
+    $query = "INSERT INTO comentarios (restaurant_name, username, comment, rating) VALUES ('$restaurant_name', '$username', '$comment', '$rating')";
+
+    return $mysqli->query($query);
+}
 
