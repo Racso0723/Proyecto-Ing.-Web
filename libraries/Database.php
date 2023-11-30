@@ -1,9 +1,9 @@
 <?php
     class Database {
         private $host = 'localhost';
-        private $user = 'root';
-        private $pass = '';
-        private $dbname = 'reservaya';
+        private $user = 'id21438984_root';
+        private $pass = 'Aranda.Jimenez1';
+        private $dbname = 'id21438984_reservaya';
         private $dbh;
         private $stmt;
         private $error;
