@@ -6,10 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/EstilosPrueba.css">
+    <link rel="stylesheet" href="estilos/EstiloPrueba.css">
     <script src="js/principal.js"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
         <script src="https://kit.fontawesome.com/8680de2650.js"></script>
        <!-- Fonts de google--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +24,13 @@
         <div class="logo">
             <img src="img/Logo.png" alt="Logo de la página web">
         </div>
-        <div class="barra-busqueda">
-            <input type="text" placeholder="Buscar...">
-            <button id="boton-busqueda" aria-label="Buscar restaurante">
-                <i class="bx bx-search-alt-2" alt="Barra de búsqueda"></i>
-            </button>
+            <div class="barra-busqueda">
+            <form action="Busqueda.php" method="GET">
+                <input type="text" name="restaurante" placeholder="Buscar...">
+                <button type="submit" aria-label="Buscar restaurante">
+                    <i class="bx bx-search-alt-2" alt="Barra de búsqueda"></i>
+                </button>
+            </form>
         </div>
                 <section class = 'seccion-iconos'>
             <div class="seccion-redes">
@@ -38,7 +41,7 @@
                 </a>
             </div>
         <div class="seccion-calendario">
-            <a href="Reservas.php">
+            <a href="HistorialReservas.php">
                 <i class="bx bx-calendar" alt = 'seccion de calendario de reservas'></i>
             </a>
         </div>
@@ -50,7 +53,7 @@
     </section>
     <section id = 'restaurante1'>
             <div class = 'contenedor-restaurante'>
-                <a href="Giorgios.html" class="enlace-restaurante">
+                <a href="Giorgios.php" class="enlace-restaurante">
                     <img src="img/Pizzeria.jpg" alt = 'Imagen del restaurante Giorgios'>
                         <div class = 'local'>
                             <p>Comida Italiana</p>
@@ -68,7 +71,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="Don Ming.html" class="enlace-restaurante">
+                <a href="Don Ming.php" class="enlace-restaurante">
                     <img src="img/RChino.jpg" alt = 'Imagen del restaurante Don Ming'>
                         <div class = 'local'>
                             <p>Comida China</p>
@@ -86,7 +89,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="Global Palate.html" class="enlace-restaurante">
+                <a href="Global Palate.php" class="enlace-restaurante">
                     <img src="img/RInternacional.jpg" alt = 'Imagen del restaurante Global Palate'>
                         <div class = 'local'>
                             <p>Comida Global</p>
@@ -104,7 +107,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="SaboresIndigenas.html" class="enlace-restaurante">
+                <a href="Sabores Indigenas.php" class="enlace-restaurante">
                     <img src="img/RPeruano.jpg" alt = 'Imagen del restaurante SaboresIndigenas'>
                         <div class = 'local'>
                             <p>Comida Peruana</p>
@@ -122,7 +125,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="Bernabeu.html" class="enlace-restaurante">
+                <a href="El Bernabeu.php" class="enlace-restaurante">
                     <img src="img/REspanol.jpg" alt = 'Imagen del restaurante Bernabeu'>
                         <div class = 'local'>
                             <p>Comida Española</p>
@@ -140,7 +143,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="MoleMas.html" class="enlace-restaurante">
+                <a href="Mole y Mas.php" class="enlace-restaurante">
                     <img src="img/RMexicano.jpg" alt = 'Imagen del restaurante Mole Y Más'>
                         <div class = 'local'>
                             <p>Comida Mexicana</p>
@@ -158,7 +161,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="kessler Pastry.html" class="enlace-restaurante">
+                <a href="Kessler Galimany.php" class="enlace-restaurante">
                     <img src="img/Pasteleria.jpg" alt = 'Imagen del restaurante Kessler Pastry'>
                         <div class = 'local'>
                             <p>Postres</p>
@@ -176,7 +179,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="Rincon del Cafe.html" class="enlace-restaurante">
+                <a href="Rincón del Café.php" class="enlace-restaurante">
                     <img src="img/Cafeteria.jpg" alt = 'Imagen del restaurante Rincon del Café'>
                         <div class = 'local'>
                             <p>Comida Panameña</p>
@@ -194,7 +197,7 @@
                 </a>
             </div>
             <div class = 'contenedor-restaurante'>
-                <a href="Fonda Ramon.html" class="enlace-restaurante">
+                <a href="Fonda Ramon.php" class="enlace-restaurante">
                     <img src="img/Fonda.jpg" alt = 'Imagen de la Fonda Ramón'>
                         <div class = 'local'>
                             <p>Comida Panameña</p>
@@ -212,28 +215,25 @@
                 </a>
             </div>
     </section>
-        <footer>
-            <div id="info-footer">
-                <ul>
-                    <p>©Copyright 2023 ReservaYa</p>
-                    <hr>
-                    <p>Contáctenos:507-6567-6768</p>
-                </ul> 
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons"> 
+                <a href=""><i class = "fa-brands fa-facebook"></i></a>
+                <a href=""><i class = "fa-brands fa-instagram"></i></a>
+                <a href=""><i class = "fa-brands fa-twitter"></i></a>
             </div>
-            <div id="info-enlaces">
+            <div class="footerNav">
                 <ul>
-                    <li><a href="InicialPrueba.php">Página de Inicio</a></li>
-                    <li><a href="historialReservas.php">Historial Reservas</a></li>
+                    <li><a href="InicialPrueba.php">Inicial</a></li>
+                    <li><a href="HistorialReservas.php">Historial de Reservas</a></li>
+                    <li><a href="Reservas.php">Hacer Reserva</a></li>
+                    <li><a href="../controllers/Users.php?q=logout">Logout</a></li>
                 </ul>
+            </div> 
+            <div class="footerBottom">
+                <p>Copyright 2023; Elaborado por <span class="designer"> Oscar & Javier </span></p>
             </div>
-            <div id="redes-footer">
-                <a href="https://www.facebook.com">
-                    <i class="bx bxl-facebook-circle" alt="logo de facebook"></i>
-                </a>
-                <a href="https://www.instagram.com">
-                    <i class="bx bxl-instagram" alt= 'logo de instagram'></i>
-                </a> 
-            </div>
+        </div>
     </footer>
 </body>
 </html>
