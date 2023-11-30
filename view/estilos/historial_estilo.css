@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: rgb(226, 226, 226);
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+
+/* Estilos para la sección del logo */
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+
+.barra-busqueda {
+  display: flex;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 48px;
+  margin: 0 20px;
+  flex-grow: 1; /* Ocupar todo el espacio disponible */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+
+
+
+/* Secciones de iconos */
+
+.seccion-iconos {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+
+
+.seccion-iconos i {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 65px;
+}
+
+.seccion-iconos i:hover{
+  background-color: #11748d;
+  font-size: 68px;
+}
+
+
+
+
+.seccion-calendario i {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  font-size: 65px;
+}
+/*Cambios solo para el css del calendario html*/
+a
+{
+  text-decoration: none;
+  color: white;
+}
+
+.seccion-calendarioInv{
+  visibility: hidden;
+}
+
+/* Contenido principal */
+#titulo
+{
+  text-align: center;
+  margin-bottom: 3px;    
+}
+
+
+
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #34AF6D;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+
+/*Attendance List serction  */
+.attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #4AD489;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.table button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+
+footer {
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: auto;
+}
+
+footer p {
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Lora', serif;
+}
+
+#info-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#info-footer p {
+  text-align: center;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Lora', serif;
+  position: relative;
+  right: 0;
+  margin: 10px;
+}
+
+#info-enlaces {
+  padding: 2% 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#info-enlaces ul li {
+  text-align: center;
+  list-style: none;
+  padding: 10px;
+}
+
+#info-enlaces ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+#info-enlaces ul li:hover::after {
+  width: 100%;
+}
+
+#redes-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#redes-footer i {
+  font-size: 67px;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+}
