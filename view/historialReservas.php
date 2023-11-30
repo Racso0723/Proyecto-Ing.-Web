@@ -1,14 +1,13 @@
 <?php
     include_once '../helpers/sesion_helper.php';
-    include_once '../controllers/Reservas.php';
+    include_once '../models/Reserva.php'; 
 ?>
-<span style="font-family: verdana, geneva, sans-serif;">
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Attendance Dashboard | By Code Info</title>
-  <link rel="stylesheet" href="estilos/historial_estilo.css" />
+  <link rel="stylesheet" href="estilos/historial_estilos.css" />
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <link rel="stylesheet"
@@ -35,7 +34,7 @@
           </a>
       </div>
   <div class="seccion-calendario">
-      <a href="Reservas.php">
+      <a href="HistorialReservas.php">
           <i class="bx bx-calendar" alt = 'seccion de calendario de reservas'></i>
       </a>
   </div>
@@ -57,14 +56,17 @@
     <tbody>
     <?php
       // Mostrar datos en la tabla
+      $init = new Reserva;
+      $reservas = $init->findReservas($_SESSION['username']);
       if (isset($reservas) && is_array($reservas)) {
         foreach ($reservas as $reserva) {
+          
       ?>
-            <tr> 
-            <td> <?php echo $reserva['nombre_rest'] ?> </td>
-            <td> <?php echo $reserva['num_personas'] ?> </td>
-            <td> <?php echo $reserva['fecha'] ?> </td>
-            <td> <?php echo $reserva['hora'] ?> </td>
+          <tr> 
+          <td> <?php echo $reserva->nombre_rest ?> </td>
+          <td> <?php echo $reserva->num_personas ?> </td>
+          <td> <?php echo $reserva->fecha ?> </td>
+          <td> <?php echo $reserva->hora ?> </td>
            </tr> 
            <?php
         }
@@ -76,32 +78,29 @@
       ?>
       </tbody>
     </table>
+    <div class="form-group">
+    <div>      
   </div>
 </section>
 <footer>
-  <div id="info-footer">
-      <ul>
-          <p>©Copyright 2023 ReservaYa</p>
-          <hr>
-          <p>Contáctenos:507-6567-6768</p>
-      </ul> 
-  </div>
-  <div id="info-enlaces">
-      <ul>
-          <li><a href="InicialPrueba.php">Página de Inicio</a></li>
-          
-          <li><a href="historialReservas.php">Historial Reservas</a></li>
-      </ul>
-  </div>
-  <div id="redes-footer">
-      <a href="https://www.facebook.com">
-          <i class="bx bxl-facebook-circle" alt="logo de facebook"></i>
-      </a>
-      <a href="https://www.instagram.com">
-          <i class="bx bxl-instagram" alt= 'logo de instagram'></i>
-      </a> 
-  </div>
+<div class="footerContainer">
+    <div class="socialIcons"> 
+        <a href=""><i class = "fa-brands fa-facebook"></i></a>
+        <a href=""><i class = "fa-brands fa-instagram"></i></a>
+        <a href=""><i class = "fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="footerNav">
+        <ul>
+            <li><a href="InicialPrueba.php">Inicial</a></li>
+            <li><a href="HistorialReservas.php">Historial de Reservas</a></li>
+            <li><a href="Reservas.php">Hacer Reserva</a></li>
+            <li><a href="../controllers/Users.php?q=logout">Logout</a></li>
+        </ul>
+    </div> 
+    <div class="footerBottom">
+        <p>Copyright 2023; Elaborado por <span class="designer"> Oscar & Javier </span></p>
+    </div>
+</div>
 </footer>
 </body>
 </html>
-</span>
